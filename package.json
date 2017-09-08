@@ -1,0 +1,45 @@
+{
+  "name": "flipcards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --forceExit",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronDrobek/flipcards.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AaronDrobek/flipcards/issues"
+  },
+  "homepage": "https://github.com/AaronDrobek/flipcards#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.4",
+    "express-flash-messages": "^0.1.1",
+    "express-session": "^1.15.5",
+    "jest": "^21.0.2",
+    "morgan": "^1.8.2",
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.5",
+    "mysql2": "^1.4.2",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "pg": "^7.3.0",
+    "psql": "0.0.1",
+    "sequelize": "^4.8.2",
+    "supertest": "^3.0.0"
+  }
+}

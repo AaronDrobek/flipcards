@@ -2,7 +2,8 @@
 const express = require("express");
 const mustacheExpress = require("mustache-express");
 const path = require("path");
-const routes = require("./routes/index");
+const routes = require("./routes/base.js");
+const api = require("./routes/api.js")
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const passport = require('passport');
@@ -70,6 +71,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(morgan("dev"));
 
-app.listen(3000, function() {
-  console.log("App is running on localhost:3000");
-});
+app.use(routes);
+app.use(api);
+
+
+if(require.main === module) {
+  app.listen(3000, function() {
+  console.log("app is running on localhost:3000");
+  })
+}
+module.exports = app;
